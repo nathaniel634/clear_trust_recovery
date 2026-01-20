@@ -1,0 +1,245 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Title -->
+<section class="page-title centred"
+    style="background-image: url(/static/frontend/assets/images/background/page-title.jpg);">
+    <div class="auto-container">
+        <div class="content-box">
+            <div class="title">
+                <h1>Our Services</h1>
+            </div>
+            <ul class="bread-crumb clearfix">
+                <li><a href="{% url 'frontend:home' %}">Home</a></li>
+                <li>Services</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Page Title -->
+
+<!-- service-section -->
+<section class="service-page-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!-- Service 1: Romance Scam Recovery -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="service-details.html"><img
+                                    src="{% static 'frontend/assets/images/service/service-1.jpg' %}"
+                                    alt="Romance Scam Recovery"></a></figure>
+                        <div class="lower-content">
+                            <div class="inner">
+                                <div class="category-box">
+                                    <div class="category">
+                                        <span>Online Fraud Investigations</span>
+                                        <div class="shape shape-1"></div>
+                                        <div class="shape shape-2"></div>
+                                        <div class="shape shape-3"></div>
+                                        <div class="shape shape-4"></div>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="service-details.html">Romance Scam Recovery</a></h3>
+                                    <p>Recover funds lost to online romance scams, trace perpetrators, and gather
+                                        evidence to take legal action.</p>
+                                </div>
+                                <div class="link"><a href="service-details.html"><i class="fas fa-arrow-right"></i> Read
+                                        More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Crypto / Bitcoin Scam Recovery -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="service-details-2.html"><img
+                                    src="{% static 'frontend/assets/images/service/service-2.jpg' %}"
+                                    alt="Crypto Scam Recovery"></a></figure>
+                        <div class="lower-content">
+                            <div class="inner">
+                                <div class="category-box">
+                                    <div class="category">
+                                        <span>Online Fraud Investigations</span>
+                                        <div class="shape shape-1"></div>
+                                        <div class="shape shape-2"></div>
+                                        <div class="shape shape-3"></div>
+                                        <div class="shape shape-4"></div>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="service-details-2.html">Crypto / Bitcoin Scam Recovery</a></h3>
+                                    <p>Track, investigate, and recover funds lost to cryptocurrency scams and fraudulent
+                                        investment schemes.</p>
+                                </div>
+                                <div class="link"><a href="service-details-2.html"><i class="fas fa-arrow-right"></i>
+                                        Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Investment & Financial Fraud -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="service-details-3.html"><img
+                                    src="{% static 'frontend/assets/images/service/service-3.jpg' %}"
+                                    alt="Investment Fraud"></a></figure>
+                        <div class="lower-content">
+                            <div class="inner">
+                                <div class="category-box">
+                                    <div class="category">
+                                        <span>Online Fraud Investigations</span>
+                                        <div class="shape shape-1"></div>
+                                        <div class="shape shape-2"></div>
+                                        <div class="shape shape-3"></div>
+                                        <div class="shape shape-4"></div>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="service-details-3.html">Investment & Financial Fraud</a></h3>
+                                    <p>Investigate Ponzi schemes, fake investment opportunities, and corporate fraud to
+                                        recover your money safely.</p>
+                                </div>
+                                <div class="link"><a href="service-details-3.html"><i class="fas fa-arrow-right"></i>
+                                        Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Online Marketplace & E-commerce Scams -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="service-details-4.html"><img
+                                    src="{% static 'frontend/assets/images/service/service-4.jpg' %}"
+                                    alt="E-commerce Scam Recovery"></a></figure>
+                        <div class="lower-content">
+                            <div class="inner">
+                                <div class="category-box">
+                                    <div class="category">
+                                        <span>Online Fraud Investigations</span>
+                                        <div class="shape shape-1"></div>
+                                        <div class="shape shape-2"></div>
+                                        <div class="shape shape-3"></div>
+                                        <div class="shape shape-4"></div>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="service-details-4.html">E-commerce & Online Marketplace Scams</a></h3>
+                                    <p>Recover losses from fraudulent online sales, fake marketplaces, or scam products
+                                        while identifying the perpetrators.</p>
+                                </div>
+                                <div class="link"><a href="service-details-4.html"><i class="fas fa-arrow-right"></i>
+                                        Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: Identity Theft & Phishing Scams -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="service-details-5.html"><img
+                                    src="{% static 'frontend/assets/images/service/service-5.jpg' %}"
+                                    alt="Identity Theft"></a></figure>
+                        <div class="lower-content">
+                            <div class="inner">
+                                <div class="category-box">
+                                    <div class="category">
+                                        <span>Online Fraud Investigations</span>
+                                        <div class="shape shape-1"></div>
+                                        <div class="shape shape-2"></div>
+                                        <div class="shape shape-3"></div>
+                                        <div class="shape shape-4"></div>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="service-details-5.html">Identity Theft & Phishing Scams</a></h3>
+                                    <p>Investigate stolen identities, phishing attacks, and online impersonation to
+                                        protect your accounts and personal information.</p>
+                                </div>
+                                <div class="link"><a href="service-details-5.html"><i class="fas fa-arrow-right"></i>
+                                        Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6: Cybercrime & Online Threats -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="service-details-6.html"><img
+                                    src="{% static 'frontend/assets/images/service/service-6.jpg' %}"
+                                    alt="Cybercrime Investigations"></a></figure>
+                        <div class="lower-content">
+                            <div class="inner">
+                                <div class="category-box">
+                                    <div class="category">
+                                        <span>Online Fraud Investigations</span>
+                                        <div class="shape shape-1"></div>
+                                        <div class="shape shape-2"></div>
+                                        <div class="shape shape-3"></div>
+                                        <div class="shape shape-4"></div>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="service-details-6.html">Cybercrime & Online Threats</a></h3>
+                                    <p>Detect and investigate cybercrimes, ransomware attacks, and online threats to
+                                        help recover losses and secure your digital presence.</p>
+                                </div>
+                                <div class="link"><a href="service-details-6.html"><i class="fas fa-arrow-right"></i>
+                                        Read More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- service-section end -->
+
+<!-- cta-style-two -->
+<section class="cta-style-two">
+    <div class="outer-container clearfix">
+
+        <!-- CTA 1: Romance & Online Scams -->
+        <div class="single-item">
+            <div class="inner-box">
+                <figure class="image-box"><img src="{% static 'frontend/assets/images/resource/cta-1.jpg' %}" alt="Romance & Online Scams"></figure>
+                <h2>Romance & Online Scam Recovery <br>in New York</h2>
+                <a href="contact.html" class="theme-btn-one">Report a Scam</a>
+            </div>
+        </div>
+
+        <!-- CTA 2: Crypto & Financial Scams -->
+        <div class="single-item">
+            <div class="inner-box">
+                <figure class="image-box"><img src="{% static 'frontend/assets/images/resource/cta-2.jpg' %}" alt="Crypto & Financial Scams"></figure>
+                <h2>Crypto & Financial Scam Recovery <br>in Berlin</h2>
+                <a href="contact.html" class="theme-btn-one">Get Help Now</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- cta-style-two end -->
+
+
+{% endblock %}
