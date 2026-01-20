@@ -5387,6 +5387,7 @@ div#mCSB_1_container{
 
 .case-sidebar .form-widget form .form-group input[type='text'],
 .case-sidebar .form-widget form .form-group input[type='email'],
+.service-sidebar .form-widget form .form-group select,
 .case-sidebar .form-widget form .form-group textarea{
   position: relative;
   display: block;

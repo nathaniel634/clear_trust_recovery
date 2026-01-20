@@ -48,21 +48,35 @@
                     <form method="post" action="" id="complaint-form" class="default-form">
                         <div class="row clearfix">
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <input type="text" name="username" placeholder="Full Name" required="">
+                                {{form.full_name}}
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <input type="email" name="email" placeholder="Email Address" required="">
+                                {{form.email}}
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                                <input type="text" name="phone" required="" placeholder="Phone Number">
+                                {{form.country}}
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                {{form.phone}}
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                 {{form.scam_company_name}}
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                {{form.amount_lost}}
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                {{form.currency}}
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                {{form.transfer_method}}
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12 form-group">
                                 <input type="text" name="case_type" required=""
                                     placeholder="Case Type (e.g., Romance Scam, Crypto Fraud)">
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <textarea name="message" placeholder="Describe your situation in detail"
-                                    required></textarea>
+                                {{form.story}}
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                 <button class="theme-btn-one" type="submit" name="submit-form">Submit Complaint</button>
