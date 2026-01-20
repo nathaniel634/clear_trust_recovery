@@ -445,13 +445,13 @@ img {
 .main-header .logo-box{
   position: relative;
   float: left;
-  padding: 32px 0px;
+  padding: 18px 0px;
 }
 
 .main-header .logo-box .logo{
   position: relative;
   display: inline-block;
-  max-width: 104px;
+  max-width: 204px;
   width: 100%;
 }
 
