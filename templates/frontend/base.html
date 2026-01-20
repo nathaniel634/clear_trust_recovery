@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>Inestit - HTML 5 Template Preview</title>
+
+<!-- Fav Icon -->
+<link rel="icon" href="{% static 'frontend/assets/images/favicon.ico' %}" type="image/x-icon">
+
+<!-- Google Fonts -->
+<!-- <link href="{% static 'frontend/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap' %}" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- Stylesheets -->
+<link href="{% static 'frontend/assets/css/font-awesome-all.css' %}" rel="stylesheet">
+<link href="{% static 'frontend/assets/css/flaticon.css' %}" rel="stylesheet">
+<link href="{% static 'frontend/assets/css/owl.css' %}" rel="stylesheet">
+<link href="{% static 'frontend/assets/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'frontend/assets/css/jquery.fancybox.min.css' %}" rel="stylesheet">
+<link href="{% static 'frontend/assets/css/animate.css' %}" rel="stylesheet">
+<link href="{% static 'frontend/assets/css/color.css' %}" rel="stylesheet">
+<link href="{% static 'frontend/assets/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'frontend/assets/css/responsive.css' %}" rel="stylesheet">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper">
+
+
+        <!-- preloader -->
+        <div class="preloader"></div>
+        <!-- preloader -->
+
+        {% include './includes/navbar.html' %}
+        {% block content %}{% endblock %}
+        {% include './includes/footer.html' %}
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="far fa-long-arrow-up"></span>
+        </button>
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="{% static 'frontend/assets/js/jquery.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/owl.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/wow.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/validation.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/appear.js' %}"></script>
+    <script src="{% static 'frontend/assets/js/scrollbar.js' %}"></script>
+
+    <!-- main-js -->
+    <script src="{% static 'frontend/assets/js/script.js' %}"></script>
+
+</body>
+</html>
