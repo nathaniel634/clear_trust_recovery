@@ -162,7 +162,7 @@
                 <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms"
                     data-wow-duration="1500ms">
                     <div class="inner-box">
-                        <figure class="image-box"><a href="service-details.html"><img
+                        <figure class="image-box"><a href="#"><img
                                     src="{% static 'frontend/assets/images/service/service-1.jpg' %}" alt=""></a>
                         </figure>
                         <div class="lower-content">
@@ -179,12 +179,12 @@
                                 </div>
                                 <div class="text">
                                     <!-- 3 words -->
-                                    <h3><a href="service-details.html">Asset Tracing Services</a></h3>
+                                    <h3><a href="#">Asset Tracing Services</a></h3>
                                     <!-- 11 words -->
                                     <p>We trace digital footprints and transactions to identify potential recovery
                                         pathways.</p>
                                 </div>
-                                <div class="link"><a href="service-details.html"><i class="fas fa-arrow-right"></i>Read
+                                <div class="link"><a href="#"><i class="fas fa-arrow-right"></i>Read
                                         More</a></div>
                             </div>
                         </div>
@@ -195,7 +195,7 @@
                 <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="300ms"
                     data-wow-duration="1500ms">
                     <div class="inner-box">
-                        <figure class="image-box"><a href="service-details-2.html"><img
+                        <figure class="image-box"><a href="#"><img
                                     src="{% static 'frontend/assets/images/service/service-2.jpg' %}" alt=""></a>
                         </figure>
                         <div class="lower-content">
@@ -212,11 +212,11 @@
                                 </div>
                                 <div class="text">
                                     <!-- 2 words -->
-                                    <h3><a href="service-details-2.html">Financial Fraud</a></h3>
+                                    <h3><a href="#">Financial Fraud</a></h3>
                                     <!-- 11 words -->
                                     <p>We analyze scam transactions and prepare structured evidence for disputes.</p>
                                 </div>
-                                <div class="link"><a href="service-details-2.html"><i
+                                <div class="link"><a href="#"><i
                                             class="fas fa-arrow-right"></i>Read More</a></div>
                             </div>
                         </div>
@@ -227,7 +227,7 @@
                 <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
                     data-wow-duration="1500ms">
                     <div class="inner-box">
-                        <figure class="image-box"><a href="service-details-3.html"><img
+                        <figure class="image-box"><a href="#"><img
                                     src="{% static 'frontend/assets/images/service/service-3.jpg' %}" alt=""></a>
                         </figure>
                         <div class="lower-content">
@@ -244,11 +244,11 @@
                                 </div>
                                 <div class="text">
                                     <!-- 2 words -->
-                                    <h3><a href="service-details-3.html">Relationship Fraud</a></h3>
+                                    <h3><a href="#">Relationship Fraud</a></h3>
                                     <!-- 11 words -->
                                     <p>We document deception patterns and financial abuse used in romance scams.</p>
                                 </div>
-                                <div class="link"><a href="service-details-3.html"><i
+                                <div class="link"><a href="#"><i
                                             class="fas fa-arrow-right"></i>Read More</a></div>
                             </div>
                         </div>
@@ -384,7 +384,7 @@
                 <h2>Recover Your Money. Restore Your Peace of Mind.</h2>
             </div>
             <div class="btn-box pull-right">
-                <a href="index.html">Contact Our Investigators</a>
+                <a href="{% url 'frontend:file_complaint' %}">Contact Our Investigators</a>
             </div>
         </div>
     </div>
@@ -411,10 +411,10 @@
                         <figure class="image-box"><img src="{% static 'frontend/assets/images/case/case-1.jpg' %}"
                                 alt=""></figure>
                         <div class="text">
-                            <h3><a href="case-details.html">Recovered Stolen Cryptocurrency</a></h3>
+                            <h3><a href="#">Recovered Stolen Cryptocurrency</a></h3>
                             <p>Crypto Scam Investigation</p>
                         </div>
-                        <div class="link"><a href="case-details.html"><i class="flaticon-right-arrow"></i></a></div>
+                        <div class="link"><a href="#"><i class="flaticon-right-arrow"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -424,10 +424,10 @@
                         <figure class="image-box"><img src="{% static 'frontend/assets/images/case/case-2.jpg' %}"
                                 alt=""></figure>
                         <div class="text">
-                            <h3><a href="case-details.html">Stopped Romance Scam Fraud</a></h3>
+                            <h3><a href="#">Stopped Romance Scam Fraud</a></h3>
                             <p>Online Romance Scam Recovery</p>
                         </div>
-                        <div class="link"><a href="case-details.html"><i class="flaticon-right-arrow"></i></a></div>
+                        <div class="link"><a href="#"><i class="flaticon-right-arrow"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -437,10 +437,10 @@
                         <figure class="image-box"><img src="{% static 'frontend/assets/images/case/case-3.jpg' %}"
                                 alt=""></figure>
                         <div class="text">
-                            <h3><a href="case-details.html">Recovered Lost Investment Funds</a></h3>
+                            <h3><a href="#">Recovered Lost Investment Funds</a></h3>
                             <p>Investment Scam Resolution</p>
                         </div>
-                        <div class="link"><a href="case-details.html"><i class="flaticon-right-arrow"></i></a></div>
+                        <div class="link"><a href="#"><i class="flaticon-right-arrow"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -461,7 +461,7 @@
                     <div class="image-box clearfix">
                         <div class="bg-layer bg-color-1"></div>
                         <img src="{% static 'frontend/assets/images/resource/chooseus-1.jpg' %}" alt="">
-                        <div class="btn-box"><a href="index.html">Discover More</a></div>
+                        <div class="btn-box"><a href="{% url 'frontend:file_complaint' %}">Discover More</a></div>
                         <div class="text">
                             <h3>We specialize in recovering funds lost to online scams</h3>
                         </div>
@@ -730,16 +730,16 @@
                     <div class="inner-box">
                         <figure class="image-box">
                             <img src="{% static 'frontend/assets/images/news/news-1.jpg' %}" alt="">
-                            <a href="blog-details.html"><i class="fas fa-link"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
                         </figure>
                         <div class="lower-content">
                             <span class="post-date">22<br>Jan</span>
                             <div class="text">
-                                <h3><a href="blog-details.html">How Much Does a Private Investigator Cost for Small Cases?</a></h3>
+                                <h3><a href="#">How Much Does a Private Investigator Cost for Small Cases?</a></h3>
                             </div>
                             <ul class="post-info clearfix centred">
-                                <li><i class="far fa-user-circle"></i><a href="blog-details.html">Christine Eve</a></li>
-                                <li><i class="far fa-comments"></i><a href="blog-details.html">2 Comments</a></li>
+                                <li><i class="far fa-user-circle"></i><a href="#">Christine Eve</a></li>
+                                <li><i class="far fa-comments"></i><a href="#">2 Comments</a></li>
                             </ul>
                         </div>
                     </div>
@@ -756,11 +756,11 @@
                         <div class="lower-content">
                             <span class="post-date">21<br>Jan</span>
                             <div class="text">
-                                <h3><a href="blog-details.html">Protecting Your Business: Security and Investigation Tips</a></h3>
+                                <h3><a href="#">Protecting Your Business: Security and Investigation Tips</a></h3>
                             </div>
                             <ul class="post-info clearfix centred">
-                                <li><i class="far fa-user-circle"></i><a href="blog-details.html">Christine Eve</a></li>
-                                <li><i class="far fa-comments"></i><a href="blog-details.html">5 Comments</a></li>
+                                <li><i class="far fa-user-circle"></i><a href="#">Christine Eve</a></li>
+                                <li><i class="far fa-comments"></i><a href="#">5 Comments</a></li>
                             </ul>
                         </div>
                     </div>
@@ -777,11 +777,11 @@
                         <div class="lower-content">
                             <span class="post-date">20<br>Jan</span>
                             <div class="text">
-                                <h3><a href="blog-details.html">How Our Investigations Help Clients Regain Peace of Mind</a></h3>
+                                <h3><a href="#">How Our Investigations Help Clients Regain Peace of Mind</a></h3>
                             </div>
                             <ul class="post-info clearfix centred">
-                                <li><i class="far fa-user-circle"></i><a href="blog-details.html">Christine Eve</a></li>
-                                <li><i class="far fa-comments"></i><a href="blog-details.html">3 Comments</a></li>
+                                <li><i class="far fa-user-circle"></i><a href="#">Christine Eve</a></li>
+                                <li><i class="far fa-comments"></i><a href="#">3 Comments</a></li>
                             </ul>
                         </div>
                     </div>
