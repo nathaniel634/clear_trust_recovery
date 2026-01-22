@@ -3,8 +3,19 @@ from django_countries.fields import CountryField
 
 
 class Complaint(models.Model):
+    STATUS_PENDING = 'pending'
+    STATUS_REVIEWED = 'reviewed'
+    # STATUS_PROCESSING = 'processing'
+    # STATUS_COMPLETED = 'completed'
+
+    STATUS_CHOICES = [
+        (STATUS_PENDING, 'Pending'),
+        (STATUS_REVIEWED, 'Reviewed')
+        # (STATUS_PROCESSING, 'Processing'),
+        # (STATUS_COMPLETED, 'Completed'),
+    ]
+
     TRANSFER_METHOD_CHOICES = [
-         ("", "Select Transfer Method Used"),
         ('crypto', 'Cryptocurrency'),
         ('bank', 'Bank Transfer'),
         ('card', 'Credit/Debit Card'),
@@ -55,6 +66,8 @@ class Complaint(models.Model):
 
     # Case Description
     story = models.TextField(help_text="Describe how the scam occurred")
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES,
+        default=STATUS_PENDING)
 
     # System Fields
     created_at = models.DateTimeField(auto_now_add=True)

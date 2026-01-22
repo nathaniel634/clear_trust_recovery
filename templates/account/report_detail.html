@@ -1,0 +1,78 @@
+{% extends './base.html ' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-header bg-white d-flex justify-content-between align-items-center">
+    <h5 class="mb-0">Case Details</h5>
+    {% if report.status == "pending" %}
+      <span class="badge bg-warning text-dark">Pending Review</span>
+    {% elif report.status == "reviewed" %}
+      <span class="badge bg-success text-light">Already Reviewed</span>
+    {% else %}
+      <span class="badge bg-success text-light">{{report.status}}</span>
+    {% endif %}
+  </div>
+{% include "../notification/messages.html" %}
+  <div class="card-body">
+
+    <h6 class="text-muted mb-3">User Information</h6>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <strong>Full Name:</strong> {{report.full_name}}
+      </div>
+      <div class="col-md-6">
+        <strong>Email:</strong> {{report.email}}
+      </div>
+      <div class="col-md-6 mt-2">
+        <strong>Country:</strong> {{report.country.name}}
+      </div>
+      <div class="col-md-6 mt-2">
+        <strong>Phone:</strong> {{report.phone}}
+      </div>
+    </div>
+
+    <h6 class="text-muted mb-3">Scam Details</h6>
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <strong>Case Type:</strong> {{report.case_type}}
+      </div>
+      <div class="col-md-4">
+        <strong>Scammer:</strong> {{report.scam_company_name}}
+      </div>
+      <div class="col-md-4">
+        <strong>Amount Lost:</strong> {{report.amount_lost|intword}} ({{report.currency}})
+      </div>
+      <div class="col-md-4 mt-2">
+        <strong>Transfer Method:</strong> {{report.transfer_method}}
+      </div>
+      <div class="col-md-4 mt-2">
+        <strong>Last Transaction:</strong> {{report.last_transaction_date|naturalday}}
+      </div>
+    </div>
+
+    <h6 class="text-muted mb-2">Case Description</h6>
+    <div class="border rounded p-3 bg-light">
+      {{report.story}}
+    </div>
+
+  </div>
+
+  <div class="card-footer text-end">
+    <!-- <a href="{% url 'account:admin_dashboard' %}" class="btn btn-secondary">
+      Back to List
+    </a> -->
+    {% if report.status == "pending" %}
+        <form method="post" action="{% url 'account:mark_as_reviewed' report.id %}" class="pinner-form">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success btn-sm" data-spinner-text="processing..."> 
+                Mark as Reviewed
+            </button>
+        </form>
+    {% else %}
+        <span class="badge bg-success p-2">Report Reviewed</span>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

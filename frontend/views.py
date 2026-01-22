@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+
 from account.forms import ComplaintForm
 
 def home_view(request):
@@ -18,8 +20,13 @@ def file_complaint_view(request):
         form = ComplaintForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("frontend:complaint_success")
+            messages.success(request, "Your complaint has been submitted successfully. We will get back to you as oon as possible.")
+            return redirect("frontend:file_complaint")
+        else:
+            messages.error(request, "Please correct the errors below and resubmit the form.")
     else:
         form = ComplaintForm()
+
     return render(request, 'frontend/file_complaint.html', {"form": form})
+
 
