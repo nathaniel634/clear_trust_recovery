@@ -1,6 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from datetime import date
+from captcha.fields import CaptchaField
 
 from .models import Complaint
 
@@ -11,24 +12,24 @@ class ComplaintForm(forms.ModelForm):
     currency = forms.ChoiceField(
         choices=[("", "Select Currency Used")] + list(Complaint.CURRENCY_CHOICES),
         required=True,
-        widget=forms.Select(attrs={
-            "class": "form-control"
-        })
+        # widget=forms.Select(attrs={
+        #     "class": "form-control"
+        # })
     )
 
     transfer_method = forms.ChoiceField(
         choices=[("", "Select Transfer Method Used")] + list(Complaint.TRANSFER_METHOD_CHOICES),
         required=True,
-        widget=forms.Select(attrs={
-            "class": "form-control"
-        })
+        # widget=forms.Select(attrs={
+        #     "class": "form-control"
+        # })
     )
 
     case_type = forms.ChoiceField(
         choices=[("", "Select Case Type")] + list(Complaint.CASE_TYPE_CHOICES),
-        widget=forms.Select(attrs={
-            "class": "form-control"
-        })
+        # widget=forms.Select(attrs={
+        #     "class": "form-control"
+        # })
     )
 
     # ✅ Date field (already correct)
@@ -36,13 +37,15 @@ class ComplaintForm(forms.ModelForm):
         widget=forms.DateInput(
             attrs={
                 "type": "text",
-                "class": "form-control",
+                # "class": "form-control",
                 "placeholder": "Last Transaction Date",
                 "onfocus": "this.type='date'",
                 "onblur": "this.type='text'"
             }
         )
     )
+
+    captcha = CaptchaField()
 
     class Meta:
         model = Complaint
@@ -58,36 +61,37 @@ class ComplaintForm(forms.ModelForm):
             "transfer_method",
             "last_transaction_date",
             "story",
+            "captcha",
         ]
 
         widgets = {
             "full_name": forms.TextInput(attrs={
                 "placeholder": "Your Full Name",
-                "class": "form-control"
+                # "class": "form-control"
             }),
             "email": forms.EmailInput(attrs={
                 "placeholder": "Email Address",
-                "class": "form-control"
+                # "class": "form-control"
             }),
             "country": forms.Select(attrs={
-                "class": "form-control"
+                # "class": "form-control"
             }),
             "phone": forms.TextInput(attrs={
                 "placeholder": "Phone Number",
-                "class": "form-control"
+                # "class": "form-control"
             }),
             "scam_company_name": forms.TextInput(attrs={
                 "placeholder": "Scam Company / Person Name",
-                "class": "form-control"
+                # "class": "form-control"
             }),
             "amount_lost": forms.NumberInput(attrs={
                 "placeholder": "Amount Lost",
-                "class": "form-control"
+                # "class": "form-control"
             }),
             "story": forms.Textarea(attrs={
                 "placeholder": "Tell us exactly what happened...",
                 "rows": 5,
-                "class": "form-control"
+                # "class": "form-control"
             }),
         }
 

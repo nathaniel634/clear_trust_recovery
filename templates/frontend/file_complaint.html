@@ -130,6 +130,12 @@
                                 <div class="text-danger small">{{ form.last_transaction_date.errors }}</div>
                                 {% endif %}
                             </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                {{ form.captcha }}
+                                {% if form.captcha.errors %}
+                                <div class="text-danger small">{{ form.captcha.errors }}</div>
+                                {% endif %}
+                            </div>
 
                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                 {{ form.story }}

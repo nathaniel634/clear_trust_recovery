@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_countries',
     'django.contrib.humanize',
+    "captcha",
 
     'frontend',
     'account',
@@ -148,3 +149,8 @@ MESSAGE_TAGS = {
 LOGIN_URL = 'account:login'
 LOGIN_REDIRECT_URL = 'account:admin_dashboard'
 LOGOUT_REDIRECT_URL = 'account:login'
+
+CAPTCHA_LENGTH = 6
+CAPTCHA_TIMEOUT = 5  # minutes
+CAPTCHA_IMAGE_SIZE = (200, 70)
+CAPTCHA_FONT_SIZE = 36
